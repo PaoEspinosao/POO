@@ -9,7 +9,7 @@ interface CDNProvider{
 
 interface CloudStorageProvider{
     storeFile(name: string):void;
-    getFIle(name:string): void;
+    getFile(name:string): void;
 }
 
 
@@ -23,7 +23,7 @@ class Amazon implements CloudHostingProvider, CDNProvider, CloudStorageProvider 
         throw new Error("Method not implemented.");
     }
 
-    getCDNAdress(): void {
+    getCDNAddress(): void {
         throw new Error("Method not implemented.");
     }
 
