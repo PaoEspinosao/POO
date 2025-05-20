@@ -1,0 +1,20 @@
+# node_modules: dependencias instaladas
+node_modules/
+
+# dist: carpeta con archivos compilados de TypeScript
+dist/
+
+# archivos de configuración del entorno
+.env
+
+# carpetas de logs y errores
+logs/
+*.log
+
+# archivos temporales del sistema o del editor
+.DS_Store
+*.swp
+.vscode/
+.idea/
+# archivos de caché de npm  
+npm-debug.log*
