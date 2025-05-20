@@ -2,16 +2,13 @@ export class Producto {
     
     private nombre: string;
     private precio: number;
-    private marca: string;
     private cantidad: number;
 
-    constructor(nombre: string, precio: number, marca: string, cantidad: number){
+    constructor(nombre: string, precio: number, cantidad: number){
         this.nombre = nombre;
         this.precio = precio;
-        this.marca = marca;
         this.cantidad = cantidad;
     }
-
 
     public getNombre(): string {
         return this.nombre;
@@ -27,15 +24,9 @@ export class Producto {
         return this.precio;
     }
 
-
-    public getMarca(): string {
-        return this.marca;
+    public setPrecio(precio: number) {
+        this.precio = precio;
     }
-
-    public setMarca(marca: string) {
-        this.marca = marca;
-    }
-
 
     public getCantidad(): number {
         return this.cantidad;

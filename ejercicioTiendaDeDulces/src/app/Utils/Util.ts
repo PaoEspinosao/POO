@@ -1,20 +1,15 @@
 import { Producto } from "../Models/Productos";
 
+export function mostrarLista(productos: Producto[], titulo: string): string {
+    if (productos.length === 0) return `<p>No hay ${titulo.toLowerCase()} registrados.</p>`;
 
-
-export function mostrarInventario (producto: Producto[], idContenedor: string){
-    const contenedor = document.getElementById(idContenedor)
-
-    if(contenedor && producto){
-        contenedor.innerHTML
-        producto.forEach(item =>{
-            const elemento = document .createElement("div");
-            elemento.innerHTML = `
-                <h2>Tienda de Dulces</h2>
-                <h2>
-            `;
-            contenedor.appendChild(elemento)
-        })
-    }
-
+    return `
+        <h4>${titulo}</h4>
+        <ul class="list-group">
+            ${productos.map(p => `
+                <li class="list-group-item">
+                    ${p.getNombre()} - $${p.getPrecio()}- ${p.getCantidad()}
+                </li>`).join("")}
+        </ul>
+    `;
 }
